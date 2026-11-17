@@ -29,3 +29,11 @@ mvn -B -ntp install    # instala no ~/.m2 local, para construir a demo-lib e o d
 ```
 
 O push de uma tag `vX.Y.Z` roda `.github/workflows/release.yml` e publica em `https://maven.pkg.github.com/open-eda-labs/demo-parent` com o `GITHUB_TOKEN` do workflow. Ler o pacote de outro repositório exige liberar o acesso de leitura ao pacote nos repositórios da org.
+
+## Release
+
+- [ ] (1) Merge na `main`.
+- [ ] (2) Criar a tag `vX.Y.Z`, igual à versão do POM.
+- [ ] (3) Conferir o workflow `release`.
+- [ ] (4) Nas configurações do pacote no GitHub, liberar leitura para os repositórios `demo-lib` e `demo-service` (ou tornar o pacote público). Não verificado nesta sessão.
+- [ ] (5) Só então a `demo-lib` e o `demo-service` podem consumir a versão pelo GitHub Packages.
